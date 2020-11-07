@@ -1,0 +1,20 @@
+const list=require('../model/model');
+module.exports.add=function(req,res){
+    list.create(req.body,function(err,newEntry){
+         if(err){
+             return;
+         }
+         console.log(newEntry);
+    });
+     res.redirect('back');
+};
+module.exports.del=function(req,res){
+    list.findByIdAndDelete(req.body.data,(err)=>{
+         if(err){
+             console.log(err);
+             return;
+         }
+         console.log("Deleted!");
+    });
+    res.redirect('back');
+};
