@@ -1,12 +1,12 @@
-const { strict } = require('assert');
 const mongoose=require('mongoose');
+//creating the Schema
 const listSchema=new mongoose.Schema({
          title:{
              type:String,
              required:true
          },
          date:{
-             type:Date,  
+             type:String,  
              required:true
          },
          category:{

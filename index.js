@@ -3,14 +3,14 @@ const port=8000;
 const server=express();
 server.set('view engine','ejs');
 server.set('views',__dirname+'/views');
-const db=require('./config/config');
-server.use(express.urlencoded());
-server.use(express.static(__dirname+'/assets'));
-server.use(require('./router/root'));
-server.listen(port,(err)=>{
+const db=require('./config/config');   //connecting to database
+server.use(express.urlencoded());      //middleware for parsing the incoming data
+server.use(express.static(__dirname+'/assets'));  //routing static files
+server.use(require('./router/root'));    //all path routing
+server.listen(port,(err)=>{               //listening the server
     if(err){
         console.error("Error!");
         return;
     }
-    console.log("Server is running");
+    console.log(`Server is running at port ${port}`);
 });

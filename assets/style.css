@@ -10,6 +10,7 @@
     width: 50%;
     margin-top:20px;
     border-top:2px solid darkgrey;
+    min-width:500px;
 }
 input,select{
     border-width: 0;
@@ -53,4 +54,20 @@ input,select{
     height:50px;
     background-color: moccasin;
     border:2px solid rebeccapurple;
+}
+#category{
+    font-weight:bold;
+    position:absolute;
+    height:40px;
+    width:20%;
+    right:5%;
+    top:10%;
+    border-radius:4%;
+    text-align: center;
+    line-height:40px;
+}
+@media (max-width:500px){
+   html{
+       font-size:10px;
+   }
 }

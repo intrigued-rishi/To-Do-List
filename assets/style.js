@@ -1,4 +1,5 @@
 var del=$("input");
+//creating ajax request to delete the tasks from frontend part
 $("button").eq(1).on("click",function(){
     for(let i=2;i<del.length;i++){
         if(del[i].checked)
